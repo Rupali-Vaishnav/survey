@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        *{
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    border:border-box;
+}
+
+body{
+    background-color: rgb(26, 122, 232);
+    color: white;
+  
+}
+.sign{
+    display: flex;
+    justify-content: space-evenly;   
+    padding-top: 5vw;
+}
+
+
+/* Form size */
+.body1{
+   
+    margin-left: 5vw;
+    height: 35vw;
+    width: 33vw;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+ /* beautiful page  */
+#main
+{
+    margin-top: 10vw;
+    height: 40vw;
+    width: 28vw;
+    font-size: 7vw;
+}
+
+/* inside form  */
+.formname{
+    color: black;
+    font-size: 2vw;
+    margin: 1.5vw 0 1vw 1.5vw;
+    padding-left: 0.5vw;
+}
+.div1{
+    display: inline-block;
+    padding: 1vw 2vw 0 3vw;;
+}
+
+
+input{
+    border: 2px solid grey;
+    font-size: 1.3vw;
+    border-radius: 6px;   
+    padding: 0.7vw 9vw 0.7vw 1vw;
+}
+.div2{
+    font-size: 1.3vw;
+    border-radius: 6px;   
+    padding: 2vw 0 0 3vw;
+}
+.registernow{
+    display: flex;
+    justify-content: center;
+    padding-top: 1vw;
+   
+}
+.registernow button
+{    color: white;
+    border-radius: 10px;
+    padding: 0 3vw 0 3vw;
+    border: 1vw solid rgb(26,122,232) ;
+    background-color: rgb(26, 122, 232);
+    cursor: pointer;
+}
+
+button:hover{
+
+    color: rgb(9, 49, 94);
+}
+    </style>
+    <div class="sign">
+        <div class="body1">
+            <p class="formname">Registration</p>
+            <!-- form started  -->
+            <div class="div1">
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="div1">
+                <input type="text" placeholder="Enter your Email">
+            </div>
+            <div class="div1">
+                <input type="password" placeholder="Create Your Password">
+            </div>
+            <div class="div1">
+                <input type="password" placeholder="Confirm Your Password">
+            </div>
+            <div class="div2" style="color: grey;">
+            <input type="checkbox" > Accept Term & conditions.</div>
+            <div class="registernow"><button>Register Now</button></div>
+           </div>
+           
+        <div class="h1">
+            <h1 id="main">Beautiful Sign Up Page</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
