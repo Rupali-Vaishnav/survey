@@ -1,111 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Todo List APP </title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                color: #333;
-                margin: 0;
-                padding: 0;
-            }
 
-            h1 {
-                background-color: #4CAF50;
-                color: white;
-                margin: 0;
-                padding: 20px;
-                text-align: center;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" -->
+        <!-- crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
 
-            ul {
-                list-style: none;
-                padding: 0;
-            }
+<body>
+    <style>
+        *{
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    border:border-box;
+}
 
-            ul li {
-                background: #fff;
-                border: 1px solid #ddd;
-                margin-bottom: 10px;
-                padding: 10px;
-                position: relative;
-            }
+body{
+    background-color: rgb(26, 122, 232);
+    color: white;
+  
+}
+.sign{
+    display: flex;
+    justify-content: space-evenly;   
+    padding-top: 5vw;
+}
 
-            ul li a {
-                color: #333;
-                text-decoration: none;
-                font-weight: bold;
-            }
 
-            ul li a:hover {
-                color: #4CAF50;
-            }
+/* Form size */
+.body1{
+   
+    margin-left: 5vw;
+    height: 35vw;
+    width: 33vw;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+ /* beautiful page  */
+#main
+{
+    margin-top: 10vw;
+    height: 40vw;
+    width: 28vw;
+    font-size: 7vw;
+}
 
-            .delete-btn {
-                color: red;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
+/* inside form  */
+.formname{
+    color: black;
+    font-size: 2vw;
+    margin: 1.5vw 0 1vw 1.5vw;
+    padding-left: 0.5vw;
+}
+.div1{
+    display: inline-block;
+    padding: 1vw 2vw 0 3vw;;
+}
 
-            .edit-btn {
-                color: #FFC107;
-                position: absolute;
-                right: 40px;
-                top: 10px;
-            }
 
-            form {
-                background: #fff;
-                padding: 20px;
-                margin-top: 20px;
-            }
+input{
+    border: 2px solid grey;
+    font-size: 1.3vw;
+    border-radius: 6px;   
+    padding: 0.7vw 9vw 0.7vw 1vw;
+}
+.div2{
+    font-size: 1.3vw;
+    border-radius: 6px;   
+    padding: 2vw 0 0 3vw;
+}
+.registernow{
+    display: flex;
+    justify-content: center;
+    padding-top: 1vw;
+   
+}
+.registernow button
+{    color: white;
+    border-radius: 10px;
+    padding: 0 3vw 0 3vw;
+    border: 1vw solid rgb(26,122,232) ;
+    background-color: rgb(26, 122, 232);
+    cursor: pointer;
+}
 
-            label {
-                display: block;
-                margin-bottom: 10px;
-            }
+button:hover{
 
-            input[type="text"] {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #ddd;
-            }
+    color: rgb(9, 49, 94);
+}
+    </style>
+    <div class="sign">
+        <div class="body1">
+            <p class="formname">Registration</p>
+            <!-- form started  -->
+            <div class="div1">
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="div1">
+                <input type="text" placeholder="Enter your Email">
+            </div>
+            <div class="div1">
+                <input type="password" placeholder="Create Your Password">
+            </div>
+            <div class="div1">
+                <input type="password" placeholder="Confirm Your Password">
+            </div>
+            <div class="div2" style="color: grey;">
+            <input type="checkbox" > Accept Term & conditions.</div>
+            <div class="registernow"><button>Register Now</button></div>
+           </div>
+           
+        <div class="h1">
+            <h1 id="main">Beautiful Sign Up Page</h1>
+        </div>
+    </div>
 
-            input[type="submit"] {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-            }
+</body>
 
-            input[type="submit"]:hover {
-                background-color: #45a049;
-            }
-        </style>
-    </head>
-
-    <body>
-        <h1>Todo List - Made By Juber Qureshi</h1>
-        <ul>
-            <% todolist.forEach(function(todo, index) { %>
-            <li>
-                <a href="/todo/delete/<%= index %>" class="delete-btn">✘</a>
-                <a href="/todo/<%= index %>" class="edit-btn">✎</a>
-                <%- todo %>
-            </li>
-            <% }); %>
-        </ul>
-
-        <form action="/todo/add/" method="post">
-            <p>
-                <label for="newtodo">What should I do?</label>
-                <input type="text" name="newtodo" id="newtodo" autofocus />
-                <input type="submit" value="Add" />
-            </p>
-        </form>
-    </body>
 </html>
