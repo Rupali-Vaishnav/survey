@@ -2,7 +2,9 @@
 
 CREATE AN EC2 INSTACE AND GIVE IT TO PERMISSION FOR "ALL TRAFFIC".
 RUN THESE ALL COMMMAND
+
 do ssh for machine access--------------------------------------------------------------------
+
      sudo apt update
      sudo apt install openjdk-11-jre
     java -version
